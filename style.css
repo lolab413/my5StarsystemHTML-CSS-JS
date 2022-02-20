@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Fredoka+One&family=Montserrat+Alternates:ital,wght@0,100;0,700;1,500&family=Poppins&family=Raleway+Dots&display=swap');
+
+* {
+  margin:0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body {
+  width: 100%;
+  display: grid;
+  background-color: white;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+.container {
+  width: 400px; /*the width of the container*/
+  background: #f2f2f2;
+  padding: 20px 30px;
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
+  display: flex;/*making the container a flex box to keep everything uniform*/
+  flex-direction: column;/*structures everything within the container into columns.*/
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container .star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 40px;
+  color: #dedede;
+  padding: 10px;
+  float: right;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #ffeb6b;
+}
+
+input:checked ~ label {
+  color: #ffeb6b;
+  transition: all 0.3s ease;
+}
+
+/*input#rate-5:checked ~ label {
+  color: #fff185;
+  text-shadow: 0 0 20px #ead4c2
+} Do this last. Gives shadow to the fifth star*/
+
+header {
+  padding: 10px;
+  color: #4d3366;
+}
+form .textarea {
+  height: 100px;
+  width: 100%;
+  overflow: hidden; 
+}
+
+form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #c4c4c4;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.btn button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #cfcfcf;
+  background: #8e42ff;
+  color: white;
+  outline: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.btn button:hover {
+  background: #c299ff;
+  cursor: pointer;
+}
+
+#rate-1:checked ~ form header:before {
+  content: "I hate it :(";
+}
+#rate-2:checked ~ form header:before {
+  content: "I didn't love it :|";
+}
+#rate-3:checked ~ form header:before {
+  content: "It was okay.";
+}
+#rate-4:checked ~ form header:before {
+  content: "I liked it :)";
+}
+#rate-5:checked ~ form header:before {
+  content: "I loved it! ;D";
+}
+.container form {
+  display: none;
+}
+input:checked ~ form {
+  display: block;
+}
+
+input#rate-5:checked ~ label {
+  color: #f9fd21;
+  text-shadow: 0 0 20px #a7876c;
+}
+
+.fa-moon {
+  color: gray;
+  float: right;
+  font-size: 20px;
+  
+  
+  
+}
+.icon {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-top: 0px;
+  padding-right: 50px;
+}
+
+.btn{
+  border: none;
+  background-color: transparent;
+}
+
+/*dark-mode styles*/
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .container {
+  background: #303030;
+}
+
+.dark-mode header {
+  color:#f9fd21;
+}
+
